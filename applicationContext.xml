@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    сканирование спрингом пакетов на наличие бинов-->
+    <context:component-scan base-package="org.example.springcourse"/>
+
+<!--1.внедрение зависимости вручную, передача объекта в конструктор в Java коде,определение объекта(бина) в xml -->
+<!--    <bean id="musicBean"-->
+<!--          class="org.example.springcourse.ClassicalMusic">-->
+<!--    </bean>-->
+
+<!--1+2.передача бина musicBean в бин(конструктор) MusicPlayer через ссылку . внедрение зависимости через spring -->
+<!--    <bean id = "MusicPlayer"-->
+<!--        class="org.example.springcourse.MusicPlayer">-->
+<!--        <constructor-arg ref="musicBean"/>-->
+<!--    </bean>-->
+<!-- 1+3.  внедрение зависимости через сеттер используя конструктор без аргументов -->
+<!--    <bean id = "MusicPlayer"-->
+<!--          class="org.example.springcourse.MusicPlayer">-->
+<!--        <property name="music" ref="musicBean"/>-->
+<!--    </bean>-->
+</beans>
